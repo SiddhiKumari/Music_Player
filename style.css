@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.music-player{
+    background: #ffe0e5;
+    width: 400px;
+    padding: 25px 35px;
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+nav .circle{
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%; /*make the div circular*/
+    line-height: 40px; /*The line-height property in CSS is used to set the amount of space between lines of text within an element.*/
+    color: #f53192;
+    box-shadow: 0 5px 10px rgba(255, 26, 26 ,0.22);
+    
+}
+.song-img{
+    width: 220px;
+    border-radius:50%;
+    border: 8px solid #fff;
+    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+}
+
+.music-player h1{
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 20px;
+}
+
+.music-player p{
+    font-size: 14px;
+    color: #333;
+    
+}
+
+#progress{
+    -webkit-appearance: none; /*When you set -webkit-appearance: none;, you are removing the default appearance that the browser provides, which allows you to apply your own custom styles. This is particularly useful for elements like buttons, inputs, and select boxes.*/
+    width: 100%;
+    height: 6px;
+    background: #f53192;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 40px 0;
+
+}
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background: #f53192;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+}
+
+.controls div{
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 20px;
+    /* line-height: 50px; */
+    color: #f53192;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+}
+
+.controls div:nth-child(2){
+    transform: scale(1.5);
+    background: #f53192;
+    color: #fff;
+}
+
+@media (max-width: 660px){
+    .container{
+      padding: 20px;
+    }
+    .wrapper .text-input{
+      flex-direction: column;
+    }
+    .text-input .to-text{
+      border-left: 0px;
+      border-top: 1px solid rgb(18, 12, 12);
+    }
+    .text-input textarea{
+      height: 200px;
+    }
+    .controls .row .icons{
+      display: none;
+    }
+    .container button{
+      padding: 13px;
+      font-size: 16px;
+      
+    }
+    .controls .row select{
+      font-size: 16px;
+    }
+    .controls .exchange{
+      font-size: 14px;
+    }
+  }
